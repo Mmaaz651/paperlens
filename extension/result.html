@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>PaperLens</title>
+  <style>
+    body {
+      margin: 0;
+      background: #1e1e28;
+      color: #eceaf4;
+      font-family: -apple-system, "Segoe UI", sans-serif;
+      font-size: 14.5px;
+      line-height: 1.55;
+    }
+    .wrap { padding: 14px 18px 18px; }
+    .brand {
+      font-size: 12px; font-weight: 700; color: #a99cf5;
+      letter-spacing: .4px; margin-bottom: 10px;
+    }
+    .quote {
+      color: #b9b5cf; font-style: italic; font-size: 13px;
+      border-left: 3px solid #46406b; padding-left: 10px;
+      margin: 0 0 12px; max-height: 90px; overflow-y: auto;
+    }
+    .muted { color: #a7a3bd; font-style: italic; }
+    .error { color: #ff9d9d; }
+    code {
+      background: #2c2c3a; border-radius: 4px; padding: 1px 5px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">✦ PaperLens</div>
+    <div class="quote" id="quote"></div>
+    <div id="answer" class="muted">Thinking&hellip; (this can take ~10 seconds)</div>
+  </div>
+  <script src="result.js"></script>
+</body>
+</html>

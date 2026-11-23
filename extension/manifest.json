@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "PaperLens — explain with Claude",
+  "version": "1.0",
+  "description": "Highlight a word, sentence or paragraph in a paper and get a plain-English, context-aware explanation from Claude (via your Claude Max plan).",
+  "permissions": ["contextMenus", "storage"],
+  "host_permissions": [
+    "http://127.0.0.1:8765/*",
+    "http://localhost:8765/*"
+  ],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_title": "PaperLens: highlight text, then click the ✦ button or right-click → Explain with Claude" }
+}
